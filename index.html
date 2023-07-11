@@ -12,9 +12,6 @@
 
 <div class="principal-de-juegos">
 
-
-    
-
     <!-- FLIP CARD GAME -->
     <div class="flipWrapper">
         <ul class="flipCards">
@@ -124,6 +121,7 @@
     </div>
     <!-- /FLIP CARD GAME -->
 
+
     <!-- GUESS THE NUMBER GAME -->
     <div class="guessGame">
         <header>
@@ -191,14 +189,23 @@
                 <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
             </div>
             <footer>
-                <div>
                     <br>
                     <button class="xoButton" onclick="xoPlayAgain(this)">Restart</button>
-                </div>
             </footer>
         </div>
     </div>
     <!-- XO GAME -->
+
+
+    <!-- MINES GAME -->
+    <div class="mineDiv">
+        <h3>Mines</h3>
+        <table id="mineGrid"></table>
+        <button class="mineButton" onclick="generateMineGrid();">Reset Game</button>
+    </div>
+    <!-- MINES GAME -->
+
+
 
 
 </div>
@@ -207,6 +214,7 @@
     <script src="flipCard.js"></script>
     <script src="guessTheNumber.js"></script>
     <script src="xoGame.js"></script>
+    <script src="mines.js"></script>
 
 </body>
 </html>

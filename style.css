@@ -7,8 +7,8 @@ body{
 
 /* FLIP CARD GAME */
 .flipWrapper{
-    padding-right: 40px;
-    
+    padding-right: 35px;
+    padding-left: 10px;
     margin-top: 25px;
     margin-bottom: 25px;
     background: #f8f8f8;
@@ -177,13 +177,14 @@ body{
     background-color: rgb(255, 255, 255);
     background-size: cover;
     text-align: center;
+    place-items: center;
 }
 .guessGame-health{
     position: relative;
     width: 200px;
     height: 25px;
     border: 2px solid #fff;
-    margin-left: 85px;
+    
 }
 .guessGame-health-number{
     position: absolute;
@@ -219,12 +220,6 @@ body{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-input, button{
-    background: none;
-    font: inherit;
-    color: inherit;
-    border: none;
-}
 .guessGame-guess{
     grid-column: 1/-1;
     padding: 5px;
@@ -236,12 +231,32 @@ input, button{
     cursor: pointer;
 }
 .guessGame-button-play{
-    background-color: rgb(34, 189, 34);
-    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3ce608;
+    border-radius: 4px;
+    padding: 4px 11px;
+    background: #fff;
+    border: 2px solid #3ce608;
+    transition: 0.3s ease;
+}
+.guessGame-button-play:hover{
+    color: #fff;
+    background: #3ce608;
 }
 .guessGame-button-reset{
-    background-color: rgb(0, 60, 255);
-    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fa2020;
+    border-radius: 4px;
+    padding: 4px 11px;
+    background: #fff;
+    border: 2px solid #fa2020;
+    transition: 0.3s ease;
+}
+.guessGame-button-reset:hover{
+    color: #fff;
+    background: #fa2020;
 }
 /* /GUESS THE NUMBER GAME */
 
@@ -300,15 +315,19 @@ input, button{
     bottom: 50px;
     top: 0;
 }
-.xoButton{
-    background: rgb(0, 0, 0);
-    border-radius: 2px;
-    color: rgb(255, 255, 255);
-    border: none;
-    outline: none;
+.xoButton {
+    cursor: pointer;
+    font-size: 14px;
+    color: #fa2020;
+    border-radius: 4px;
+    padding: 4px 11px;
+    background: #fff;
+    border: 2px solid #fa2020;
+    transition: 0.3s ease;
 }
-.xoButton:focus{
-    background: silver;
+.xoButton:hover{
+    color: #fff;
+    background: #fa2020;
 }
 .activeBox{
     background: silver;
@@ -327,7 +346,45 @@ input, button{
 
 
 
-/* -------------------- */
-
-
-/* -------------------- */
+/* MINES GAME */
+.mineDiv{
+    border-radius: 5px;
+    display: grid;
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    place-items: center;
+}
+.mineDiv h3{
+    color: #ff0000;
+}
+#mineGrid tr td{
+    border: 1px solid #fff;
+    background-color: #222222;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+#mineGrid tr td.active{
+    background-color: #b4b4b4;
+}
+#mineGrid tr td.mine{
+    background-color: #ff0000;
+}
+.mineButton {
+    cursor: pointer;
+    font-size: 14px;
+    color: #fa2020;
+    border-radius: 4px;
+    padding: 4px 11px;
+    background: #fff;
+    border: 2px solid #fa2020;
+    transition: 0.3s ease;
+}
+.mineButton:hover{
+    color: #fff;
+    background: #fa2020;
+}
+/* /MINES GAME */
