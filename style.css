@@ -1,21 +1,14 @@
 /* GENERAL */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
 body{
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background: #000000;
 }
 
 /* FLIP CARD GAME */
 .flipWrapper{
-    padding: 25px;
+    padding-right: 40px;
+    
     margin-top: 25px;
     margin-bottom: 25px;
     background: #f8f8f8;
@@ -254,8 +247,87 @@ input, button{
 
 
 
-/* /[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+/* XO GAME */
+#xoDiv{
+    margin: 5% auto;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #ff0000;
+}
+.xoBox{
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100px;
+    height: 100px;
+
+    padding: 0;
+}
+.xoSpan{
+    position: absolute;
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    padding: 0;
+    margin: 5px;
+    margin-left: -35px;
+}
+.xoTop{
+    border-top: none;}
+.xoBottom{
+    border-bottom: none;}
+.xoLeft{
+    border-left: none;}
+.xoRight{
+    border-right: none;}
+.xoAlert{
+    height: 75px;
+    width: 125px;
+    display: inline-block;
+    background: ghostwhite;
+    position: relative;
+    z-index: 10;
+    margin-top: -50%;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px rgb(255, 46, 46);
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    box-sizing: content-box;
+    text-align: center;
+    padding: 30px;
+    bottom: 50px;
+    top: 0;
+}
+.xoButton{
+    background: rgb(0, 0, 0);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+.xoButton:focus{
+    background: silver;
+}
+.activeBox{
+    background: silver;
+}
+@keyframes larger{
+    from{
+        height: 75px;
+        width: 125px;
+    }
+    to{
+        height: 100px;
+        width: 250px;
+    }
+}
+/* XO GAME */
 
 
 
-/* /[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+/* -------------------- */
+
+
+/* -------------------- */

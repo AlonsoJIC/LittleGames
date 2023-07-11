@@ -12,6 +12,9 @@
 
 <div class="principal-de-juegos">
 
+
+    
+
     <!-- FLIP CARD GAME -->
     <div class="flipWrapper">
         <ul class="flipCards">
@@ -150,10 +153,52 @@
     <!-- /GUESS THE NUMBER GAME -->
 
 
-    <!-- GUESS THE NUMBER GAME -->
-
-
-    <!-- /GUESS THE NUMBER GAME -->
+    <!-- XO GAME -->
+    <div id="xoDiv">
+        <div>
+            XO GAME <br><br>
+        </div>
+        <div class="xoBlock">
+            <div id="xoBox1" class="xoBox xoTop xoLeft">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox2" class="xoBox xoTop">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox3" class="xoBox xoTop xoRight">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+        </div>
+        <div class="xoBlock">
+            <div id="xoBox4" class="xoBox xoLeft">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox5" class="xoBox">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox6" class="xoBox xoRight">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+        </div>
+        <div class="xoBlock">
+            <div id="xoBox7" class="xoBox xoBottom xoLeft">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox8" class="xoBox xoBottom">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <div id="xoBox9" class="xoBox xoBottom xoRight">
+                <span class="xoSpan" data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+            <footer>
+                <div>
+                    <br>
+                    <button class="xoButton" onclick="xoPlayAgain(this)">Restart</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- XO GAME -->
 
 
 </div>
@@ -161,6 +206,7 @@
 
     <script src="flipCard.js"></script>
     <script src="guessTheNumber.js"></script>
+    <script src="xoGame.js"></script>
 
 </body>
 </html>
