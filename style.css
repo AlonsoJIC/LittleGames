@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,300&display=swap');
-
 /* GENERAL */
 *{
     padding: 0;
@@ -16,24 +14,26 @@ body{
 }
 
 /* FLIP CARD GAME */
-.wrapper{
+.flipWrapper{
     padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.cards, .card, .view, .details, p{
+.flipCards, .flipCard, .view, .flipDetails, p{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cards{
+.flipCards{
     height: 350px;
     width: 350px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.cards .card{
+.flipCards .flipCard{
     cursor: pointer;
     position: relative;
     perspective: 1000px;
@@ -61,7 +61,7 @@ body{
         transform: translateX(8px);
     }
 }
-.cards .card .view{
+.flipCards .flipCard .view{
     width: 100%;
     height: 100%;
     user-select: none;
@@ -73,22 +73,22 @@ body{
     transition: transform 0.25s linear;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-.card .front-view i{
+.flipCard .front-view i{
     font-size: 40px;
 }
-.card .back-view i{
+.flipCard .back-view i{
     font-size: 40px;
 }
-.card .back-view {
+.flipCard .back-view {
     transform: rotateY(-180deg);
 }
-.card.flip .front-view{
+.flipCard.flip .front-view{
     transform: rotateY(180deg);
 }
-.card.flip .back-view{
+.flipCard.flip .back-view{
     transform: rotateY(0);
 }
-.details{
+.flipDetails{
     width: 100%;
     margin-top: 15px;
     padding: 0 20px;
@@ -97,19 +97,19 @@ body{
     height: calc(100% / 4 - 30px);
     justify-content: space-between;
 }
-.details p{
+.flipDetails p{
     font-size: 18px;
     height: 17px;
     padding-right: 18px;
     border-right: 1px solid #ccc;
 }
-.details p span{
+.flipDetails p span{
     margin-left: 8px;
 }
-.details p b{
+.flipDetails p b{
     font-weight: 500;
 }
-.details button{
+.flipDetails button{
     cursor: pointer;
     font-size: 14px;
     color: #fa2020;
@@ -119,7 +119,7 @@ body{
     border: 2px solid #fa2020;
     transition: 0.3s ease;
 }
-.details button:hover{
+.flipDetails button:hover{
     color: #fff;
     background: #fa2020;
 }
@@ -128,38 +128,38 @@ body{
     background: #fa2020;
 }
 @media screen and (max-width: 700px) {
-    .cards{
+    .flipCards{
         height: 350px;
         width: 350px;
     }
-    .card .front-view i{
+    .flipCard .front-view i{
         font-size: 35px;
     }
-    .card .back-view i{
+    .flipCard .back-view i{
         font-size: 35px;
     }
 }
 @media screen and (max-width: 530px) {
-    .cards{
+    .flipCards{
         height: 300px;
         width: 300px;
     }
-    .card .back-view i{
+    .flipCard .back-view i{
         font-size: 30px;
     }
-    .details{
+    .flipDetails{
         margin-top: 10px;
         padding: 0 15px;
         height: calc(100% / 4 - 20px);
     }
 
-    .details p{
+    .flipDetails p{
         height: 15px;
         font-size: 17px;
         padding-right: 13px;
     }
 
-    .details button{
+    .flipDetails button{
         font-size: 13px;
         padding: 5px 10px;
         border: none;
@@ -168,5 +168,94 @@ body{
     }
     
 }
+/* /FLIP CARD GAME */
 
 
+
+/* GUESS THE NUMBER GAME */
+.guessGame{
+    max-width: 440px;
+    display: grid;
+    align-items: center;
+    gap: 0px;
+    padding: 50px 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    text-align: center;
+}
+.guessGame-health{
+    position: relative;
+    width: 200px;
+    height: 25px;
+    border: 2px solid #fff;
+    margin-left: 85px;
+}
+.guessGame-health-number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+}
+.guessGame-health-bar{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(61, 212, 61);
+}
+.guessGame-title{
+    font-size: 24px;
+}
+.guessGame-number{
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+    color: #ffffff;
+    margin: 20px auto;
+    background-color:  rgb(255, 0, 0);
+    background-size: cover;
+}
+.guessGame-feedback{
+    font-size: 14px;
+}
+.guessGame footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+input, button{
+    background: none;
+    font: inherit;
+    color: inherit;
+    border: none;
+}
+.guessGame-guess{
+    grid-column: 1/-1;
+    padding: 5px;
+    border: 2px solid #000000;
+}
+.guessGame-button{
+    padding: 10px 15px;
+    box-shadow: 5px 5px #090909;
+    cursor: pointer;
+}
+.guessGame-button-play{
+    background-color: rgb(34, 189, 34);
+    color: white;
+}
+.guessGame-button-reset{
+    background-color: rgb(0, 60, 255);
+    color: white;
+}
+/* /GUESS THE NUMBER GAME */
+
+
+
+/* /[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+
+
+
+/* /[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */

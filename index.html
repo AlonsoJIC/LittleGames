@@ -6,14 +6,16 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Card Game</title>
+    <title>Little Games</title>
 </head>
 <body>
 
+<div class="principal-de-juegos">
+
     <!-- FLIP CARD GAME -->
-    <div class="wrapper">
-        <ul class="cards">
-            <li class="card">
+    <div class="flipWrapper">
+        <ul class="flipCards">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -21,7 +23,7 @@
                     <i class='bx bxl-tiktok'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -29,7 +31,7 @@
                     <i class='bx bxl-instagram-alt'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -37,7 +39,7 @@
                     <i class='bx bxl-facebook-circle' ></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -45,7 +47,7 @@
                     <i class='bx bxl-twitter'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -53,7 +55,7 @@
                     <i class='bx bxl-whatsapp' ></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -61,7 +63,7 @@
                     <i class='bx bxl-youtube' ></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -69,7 +71,7 @@
                     <i class='bx bxl-tiktok'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -77,7 +79,7 @@
                     <i class='bx bxl-instagram-alt'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -85,7 +87,7 @@
                     <i class='bx bxl-facebook-circle' ></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -93,7 +95,7 @@
                     <i class='bx bxl-twitter'></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -101,7 +103,7 @@
                     <i class='bx bxl-whatsapp' ></i>
                 </div>
             </li>
-            <li class="card">
+            <li class="flipCard">
                 <div class="view front-view">
                     <i class='bx bx-question-mark'></i>
                 </div>
@@ -110,7 +112,7 @@
                 </div>
             </li>
 
-            <div class="details">
+            <div class="flipDetails">
                 <p class="time">Time : <span><b>0</b>s</span></p>
                 <p class="flips">Flips : <span><b>0</b></span></p>
                 <button>Refresh</button>
@@ -119,11 +121,46 @@
     </div>
     <!-- /FLIP CARD GAME -->
 
+    <!-- GUESS THE NUMBER GAME -->
+    <div class="guessGame">
+        <header>
+            <div class="guessGame-health">
+                <div class="guessGame-health-number">100%</div>
+                <div class="guessGame-health-bar"></div>
+            </div>
+        </header>
+
+        <div>
+            <h1 class="guessGame-title">
+                Guess a number between 1 & 10
+            </h1>
+            <div class="guessGame-number">?</div>
+            <span class="guessGame-feedback">
+                What is your guess?
+            </span>
+        </div>
+
+        <footer>
+            <input type="number" class="guessGame-guess">
+            <button type="button" class="guessGame-button guessGame-button-play">Play</button>
+            <button type="button" class="guessGame-button guessGame-button-reset">Reset</button>
+        </footer>
+
+    </div>
+    <!-- /GUESS THE NUMBER GAME -->
 
 
+    <!-- GUESS THE NUMBER GAME -->
+
+
+    <!-- /GUESS THE NUMBER GAME -->
+
+
+</div>
 
 
     <script src="flipCard.js"></script>
+    <script src="guessTheNumber.js"></script>
 
 </body>
 </html>

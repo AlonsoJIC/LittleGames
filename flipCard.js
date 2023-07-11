@@ -1,7 +1,7 @@
-const cards = document.querySelectorAll(".card"),
+const cards = document.querySelectorAll(".flipCard"),
 timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
-refreshBtn = document.querySelector(".details button");
+refreshBtn = document.querySelector(".flipDetails button");
 
 let maxTime = 20;
 let timeLeft = maxTime;
